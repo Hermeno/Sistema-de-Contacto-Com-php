@@ -1,7 +1,7 @@
 <?php 
 session_start(); 
 $con = new PDO("mysql:host=localhost; dbname=empresa","root","");
-if(isset($_POST['add'])) {
+if(isset($_POST['add'])) { 
 	$nome = $_POST['nome'];
 	$empresa = $_POST['empresa'];
 	$contacto = $_POST['contacto'];
@@ -48,12 +48,12 @@ if(isset($_GET['delete'])) {
 }
 //-----------------------------------------this is a place of update----------------------
 if(isset($_POST['editing'])) {
-	if(isset($_GET['get'])) {
+     if(isset($_GET['get'])) {
 	  $edite = $_GET['get'];
 	}
-	 $nome = $_POST['nome'];
-	 $empresa = $_POST['empresa'];
-	 $contacto = $_POST['contacto'];
+	$nome = $_POST['nome'];
+	$empresa = $_POST['empresa'];
+	$contacto = $_POST['contacto'];
 	$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
 	$empresa = filter_input(INPUT_POST, 'empresa', FILTER_SANITIZE_STRING);
 	$contacto = filter_input(INPUT_POST, 'contacto', FILTER_SANITIZE_STRING);
