@@ -34,7 +34,9 @@ if(isset($_POST['add'])) {
 		$_SESSION['success'] = "Escrever O contacto";
    }
 }
-//-----------------------------------------this is a place of delete----------------------
+
+
+
 if(isset($_GET['delete'])) {
    $dels = $_GET['delete'];
    $sql = "DELETE FROM usuarios WHERE id = ? ";
@@ -46,7 +48,8 @@ if(isset($_GET['delete'])) {
    	 header("location: index.php");
    }
 }
-//-----------------------------------------this is a place of update----------------------
+
+
 if(isset($_POST['editing'])) {
      if(isset($_GET['get'])) {
 	  $edite = $_GET['get'];
